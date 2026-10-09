@@ -1,0 +1,20 @@
+name: abmil-oct
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10.12
+  - pytorch=1.13.1
+  - torchvision=0.14.1
+  - pytorch-cuda=11.6
+  - numpy=1.24.3
+  - scipy=1.10.1
+  - scikit-image=0.20.0
+  - scikit-learn=1.2.2
+  - matplotlib=3.7.1
+  - opencv=4.7.0
+  - pillow=9.4.0
+  - pytest=7.4.4
+  - pip=23.3.2
+  - setuptools=68.2.2

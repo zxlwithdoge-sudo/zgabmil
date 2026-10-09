@@ -1,0 +1,43 @@
+{
+  "shared": {
+    "patch_size": 112,
+    "epochs": 12,
+    "folds": 10,
+    "seed": 0,
+    "dropout": true,
+    "dropout_probability": 0.25,
+    "checkpoint_criterion": "last",
+    "feature_dim": 1024,
+    "attention_hidden_dim": 256,
+    "tissue_mask": {
+      "median_size": 15,
+      "otsu_scale": 0.35,
+      "minimum_tissue_fraction": 0.2,
+      "minimum_component_size": 1024
+    }
+  },
+  "AD_vs_NC": {
+    "label0": "NC",
+    "label1": "AD",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001
+  },
+  "CTE_vs_NC": {
+    "label0": "NC",
+    "label1": "CTE",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.00001
+  },
+  "spatial": {
+    "comment": "GABMIL spatial information mixing (SIMM). spatial_mode 'none' is the manuscript ABMIL model; the other modes add position-mixing MLPs over the patch grid. Window sizes are in patches, not pixels. Not yet tuned on the OCT cohorts.",
+    "reference": "https://github.com/hassancpu/GABMIL",
+    "spatial_mode": "none",
+    "block_size": 3,
+    "grid_size": 3,
+    "suggested_sweep": {
+      "spatial_mode": ["none", "block", "grid", "block_grid"],
+      "block_size": [2, 3, 4],
+      "grid_size": [2, 3, 4]
+    }
+  }
+}

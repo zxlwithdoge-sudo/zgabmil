@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.idea/
+.vscode/
+
+data/
+splits/
+results/
+attention_maps/
+work/
+*.pt
+*.pth
+*.o[0-9]*
+*.e[0-9]*
